@@ -1,3 +1,3 @@
-# stockosaurus-api
+# stockosaurus-app
 
-yoyoyo
+frontend for stockosaurus using react
