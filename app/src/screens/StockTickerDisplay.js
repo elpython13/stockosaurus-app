@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { TickersEndpoint } from "../app/Constants";
 
 function StockTickerDisplay() {
     const [error, setError] = useState(null);
@@ -7,7 +8,7 @@ function StockTickerDisplay() {
 
     useEffect(
         () => {
-            fetch("http://127.0.0.1:8000/stocks/tickers/")
+            fetch(TickersEndpoint)
               .then(res => res.json())
               .then(
                 (result) => {
