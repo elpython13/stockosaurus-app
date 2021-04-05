@@ -1,7 +1,7 @@
-function NewsFeed() {
+function Home() {
     return (
         <div>ITS WORKING</div>
     );
 }
 
-export default NewsFeed
+export default Home
