@@ -10,12 +10,8 @@ function Routes() {
     return (
         <Router>
           <Switch>
-            <Route path="/stocks">
-              <StockTickerDisplay />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route path="/stocks"><StockTickerDisplay /></Route>
+            <Route path="/"><Home /></Route>
           </Switch>
       </Router>
     );
