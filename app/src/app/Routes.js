@@ -1,5 +1,5 @@
 import Home from '../screens/Home';
-import StockTickerDisplay from '../screens/StockTickerDisplay';
+import StockDisplay from '../screens/StockDisplay';
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,7 +10,7 @@ function Routes() {
     return (
         <Router>
           <Switch>
-            <Route path="/stocks"><StockTickerDisplay /></Route>
+            <Route path="/stocks"><StockDisplay /></Route>
             <Route path="/"><Home /></Route>
           </Switch>
       </Router>
