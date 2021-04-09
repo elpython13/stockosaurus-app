@@ -1,13 +1,17 @@
-import { Navbar, Nav, NavDropdown, Button, Form, FormControl } from 'react-bootstrap';
+import React from "react";
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 
-
-function NavBar() {
-    return (
-        <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="/">Home</Navbar.Brand>
-            <Navbar.Brand href="/stocks">Stocks</Navbar.Brand>
+const NavBar = () => (
+    <div className="navbar-container">
+        <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="./">stockosaurus</Navbar.Brand>
+            <Nav className="mr-auto">
+            <Nav.Link href="./stocks">stocks</Nav.Link>
+            <Nav.Link href="./">news</Nav.Link>
+            <Nav.Link href="./">architecture</Nav.Link>
+            </Nav>
         </Navbar>
-    );
-}
+   </div>
+);
 
 export default NavBar
