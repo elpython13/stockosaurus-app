@@ -1,26 +1,31 @@
 import React, { useEffect, useState } from "react";
-import { TickersEndpoint } from "../app/Constants";
+import { TickersEndpoint, StocksEndpoint } from "../app/Constants";
+import LineSimple from '../components/LineSimple';
+
 
 function StockDisplay() {
+
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [tickers, setTickers] = useState([]);
+    const [stocks, setStocks] = useState([]);
+    const [ticker, setTicker] = useState('TSLA');
+    const handleChange = (event) => { setTicker(event.target.value) }
 
     useEffect(
         () => {
-            fetch(TickersEndpoint)
+            fetch(StocksEndpoint + '?ticker=' + ticker)
               .then(res => res.json())
               .then(
                 (result) => {
                   setIsLoaded(true);
-                  setTickers(result.results);
+                  setStocks(result.results);
                 },
                 (error) => {
                   setIsLoaded(true);
                   setError(error);
                 }
               )
-          }, [])
+          }, [ticker])
 
     if (error) {
         return <div>Error: {error.message}</div>;
@@ -31,15 +36,23 @@ function StockDisplay() {
           <div className="stocks-container">
             <div className="graph-toolbar">
               <h3>graph toolbar component</h3>
+              <form >
+                <label>Name:
+                <input type="text" onChange={handleChange} />
+                </label>
+                <input type="submit" value="Submit" />
+              </form>
             </div>
             <div className="graph">
                 <h3>graph component</h3>
-                {tickers.map(ticker => <div>{ticker.ticker_symbol}</div>)}
+                <LineSimple data={stocks}/>
+                {stocks.map(stock => <div>{stock.date} price: {stock.low}</div>)}
             </div>
 
           </div>
         );
     }
-}
+  }
 
-export default StockDisplay;
+
+export default StockDisplay
