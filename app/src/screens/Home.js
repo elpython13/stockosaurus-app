@@ -1,7 +1,11 @@
-function Home() {
-    return (
-        <div>ITS WORKING</div>
-    );
-}
+import React from "react";
+     
+export default function Home() {
 
-export default Home
+        return (
+            <div>
+                <h3>home page yo</h3>
+            </div>   
+        );
+    }
+

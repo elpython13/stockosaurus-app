@@ -1,47 +1,50 @@
 .App {
-  text-align: center;
   background-color: black;
 
 }
 
 .footer{
-  background-color: rgb(70, 70, 83);
+  background-color: rgb(65, 65, 73);
   color: white;
-  position: fixed;
+  text-align: center;
   bottom: 0;
   left: 0;
   width: 100%;
   margin-top: 1rem;
+  padding-bottom: 2px; 
+  margin-bottom: auto;
 }
-
-
 
 /*    style for /stocks    */
 
 .stocks-container {
   background-color: black;
-  width: 100vw;
-  height: 90vh;
 	margin-left: auto;
 	margin-right: auto;
+  position: float;
+  padding-bottom: 150px;
+  padding-top: 40px;
 }
 
 .graph-toolbar {
-  background-color:  rgb(22, 58, 5);
+  background-color:  rgb(0, 0, 0);
   color: white;
-  font-size: 3vmin;
+  font-size: 2.2vmin;
   margin-left: auto;
 	margin-right: auto;
-  width: 90vw;
+  width: 70vw;
   height: 6vh;
+  padding-bottom: 70px;
 }
 
 .graph {
-  background-color: rgb(35, 94, 8);
+  background-color: rgb(37, 36, 35);
   color: white;
   margin-left: auto;
 	margin-right: auto;
-  width: 90vw;
+  width: 70vw;
   height: 60vh;
-  position:relative;
+  text-align: center;
+
 }
+
