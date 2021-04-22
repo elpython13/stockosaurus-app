@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { TickersEndpoint, StocksEndpoint } from "../app/Constants";
+import { StocksEndpoint } from "../app/Constants";
 import LineSimple from '../components/LineSimple';
+import GraphToolbar from '../components/GraphToolbar';
 
-
-function StockDisplay() {
+export default function StockDisplay() {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [stocks, setStocks] = useState([]);
-    const [ticker, setTicker] = useState('TSLA');
-    const handleChange = (event) => { setTicker(event.target.value) }
+    const [ticker, setTicker] = useState(['TSLA']);
+    const handleChange = (event) => { setTicker(event.target.value); }
 
     useEffect(
         () => {
@@ -35,24 +35,15 @@ function StockDisplay() {
         return (
           <div className="stocks-container">
             <div className="graph-toolbar">
-              <h3>graph toolbar component</h3>
-              <form >
-                <label>Name:
-                <input type="text" onChange={handleChange} />
-                </label>
-                <input type="submit" value="Submit" />
-              </form>
+              <GraphToolbar ticker={handleChange}/>
             </div>
             <div className="graph">
-                <h3>graph component</h3>
+                <h3>{ticker}</h3>
                 <LineSimple data={stocks}/>
-                {stocks.map(stock => <div>{stock.date} price: {stock.low}</div>)}
+                
             </div>
-
-          </div>
+          </div>   
         );
     }
   }
-
-
-export default StockDisplay
+  
