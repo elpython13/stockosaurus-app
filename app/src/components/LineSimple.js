@@ -4,7 +4,6 @@ import {
   Line,
   XAxis,
   YAxis,   
-  CartesianGrid,
   Tooltip,
   Legend,
   ResponsiveContainer
@@ -16,7 +15,7 @@ export default function LineSimple(props) {
       <ResponsiveContainer width="90%" height="90%">
         <LineChart width={500} height={300} data={props.data}
           margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-          <XAxis dataKey="date" domain={['auto', 'auto']} />
+          <XAxis dataKey="date"  domain={['auto', 'auto']} />
           <YAxis type="number" domain={['auto', 'auto']}/>
           <Tooltip animationDuration='500' />
           <Legend />
