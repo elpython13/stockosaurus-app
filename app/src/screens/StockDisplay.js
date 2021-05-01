@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./stockdisplay.css";
 import { StocksEndpoint } from "../app/Constants";
 import LineSimple from '../components/LineSimple';
 import GraphToolbar from '../components/GraphToolbar';
