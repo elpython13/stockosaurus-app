@@ -1,0 +1,17 @@
+.arch-container {
+    background-color: rgb(27, 27, 26);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template:  0.05fr 0.8fr  / 0.05fr 1fr 1fr 1fr 0.05fr;
+    gap: 15px;
+    padding: 3vh 5vw 3vh 5vw;
+}
+
+.arch-diagram {
+    background-color: rgb(27, 27, 26);
+    grid-row: 2;
+    grid-column: 2 / 5;
+    margin-left: auto;
+    margin-right: auto;
+}
