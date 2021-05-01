@@ -10,7 +10,6 @@ import { AppBar,
          makeStyles
 } from '@material-ui/core';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -71,7 +70,7 @@ export default function GraphToolbar(props) {
  
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" color="primary">
           <Toolbar>
             <IconButton
               edge="start"
